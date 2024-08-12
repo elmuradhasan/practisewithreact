@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"; 
+import {  Link } from 'react-router-dom';
 import axios from "axios"
 const Country = () =>{
     const [countries, setcountries] = useState([]);
@@ -17,14 +18,18 @@ const Country = () =>{
     < >
 {
   countries.map((country, index) => {
-    const { name: { common },capital } = country;
-   
+    const { name: { common },capital, maps : {googleMaps} } = country;
+      
     return (
       
-       <div className="countrysubdiv">
-       <h4>{common}</h4>
-       <p>{capital}</p>
+       <Link to="details">
+        <div className="countrysubdiv">
+       <h2>Country: {common}</h2>
+       <p>Capital:{capital}</p>
+       <img src={country.flags.png} alt={country.flag} className="flagclass" />
+         <a className="googleMaps" href={googleMaps} > Google Map</a>
        </div>
+        </Link>
      
     );
   })
