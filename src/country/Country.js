@@ -19,10 +19,11 @@ const Country = () =>{
 {
   countries.map((country, index) => {
     const { name: { common },capital, maps : {googleMaps} } = country;
+      console.log(common,"cccc");
       
     return (
       
-       <Link to="details">
+       <Link to={`/details/${common}`}>
         <div className="countrysubdiv">
        <h2>Country: {common}</h2>
        <p>Capital:{capital}</p>
