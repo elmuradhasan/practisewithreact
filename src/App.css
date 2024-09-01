@@ -56,3 +56,31 @@ justify-content: space-evenly;
     justify-content:space-evenly ;
     align-items: center ;
 }
+.classPostDiv{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navbarClass{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: space-around;
+    background-color: rgb(0, 0, 0);
+}
+.navbarClass a{
+   color: rgb(237, 237, 237);
+   font-size: 32px;
+}
+.subPostDivclass{
+    width: 400px;
+    height: 300px;
+    border: 2px solid #000;
+    padding: 10px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
